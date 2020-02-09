@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+</head>
+<body>
+<div><textarea id="c" cols="67" rows="12">You are stupid! Come here. I will tell you the truth. Where you now?</textarea></div>
+ 
+<div><textarea id="s1" cols="67" rows="12" readonly="readonly" ondblclick="sa()"></textarea></div>
+<div><textarea id="s2" cols="67" rows="12" readonly="readonly" ondblclick="sb()"></textarea></div>
+<script type="text/javascript">
+function sa(){
+    document.getElementById("s1").value=document.getElementById("c").value.replace(/(\w+|\W+)\s*/g,"$1\n");
+}
+function sb(){
+    document.getElementById("s2").value=document.getElementById("c").value.replace(/(.+?[\.\?!;])\s+/g,"$1\n");
+}
+	sa();
+	sb()
+</script>
+</body>
+</html>
